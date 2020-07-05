@@ -1,6 +1,8 @@
 # HM_DataAug (Team name: opossum)
 Histogram Matching for Domain Adaptation: Solution to M\&Ms 2020
 
+> The authors of this paper declare that the segmentation method they implemented for participation in the M&Ms challenge has not used any pre-trained models nor additional MRI datasets other than those provided by the organizers.
+
 ## Prepare data
 
 - Clone this repo. and put testing cases in `mnms`
@@ -15,14 +17,15 @@ Histogram Matching for Domain Adaptation: Solution to M\&Ms 2020
 
 - Install [nnUNet](https://github.com/MIC-DKFZ/nnunet)
 
-> cd V2_nnUNet/nnUNet
+    > cd V2_nnUNet/nnUNet
 
-> pip install -e .
+    > pip install -e .
 
-> cd nnunet
+    > cd nnunet
+
+> Please use our modified nnUNet in this repo. rather than the official nnUNet.
 
 **All the following commands should be run in V2_nnUNet/nnUNet/nnunet**
-
 
 ## Solution 1: 3D Best Model
 
