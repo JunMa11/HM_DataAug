@@ -26,9 +26,9 @@ default_cascade_trainer = "nnUNetTrainerV2CascadeFullRes"
 PLEASE READ paths.md FOR INFORMATION TO HOW TO SET THIS UP
 """
 
-base = '/media/mia/Data/V2_nnUNetData'
+base = '/V2_nnUNetData'
 # os.environ['nnUNet_raw_data_base'] if "nnUNet_raw_data_base" in os.environ.keys() else None
-preprocessing_output_dir = '/media/mia/Data/V2_nnUNetData/pre_data'
+preprocessing_output_dir = join(base, 'pre_data')
 # os.environ['nnUNet_preprocessed'] if "nnUNet_preprocessed" in os.environ.keys() else None
 network_training_output_dir_base = './TrainedModels'
 # os.path.join(os.environ['RESULTS_FOLDER']) if "RESULTS_FOLDER" in os.environ.keys() else None
