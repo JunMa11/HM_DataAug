@@ -13,7 +13,7 @@ Histogram Matching for Domain Adaptation: Solution to M\&Ms 2020
 
 ## Prepare Trained Models and code
 
-- Download trained models and put them in `V2_nnUNet/nnUNet/nnunet`
+- Download (also extract) [trained models](https://mega.nz/file/25hWTQbJ#FeOHXzuXq9lHxyTyElJdt1vOidKH8P_l_RZSwmQkXHo) and put them in `V2_nnUNet/nnUNet/nnunet`
 
 - Install [nnUNet](https://github.com/MIC-DKFZ/nnunet)
 
