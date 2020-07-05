@@ -1,4 +1,4 @@
-# HM_DataAug
+# HM_DataAug (Team name: opossum)
 Histogram Matching for Domain Adaptation: Solution to M\&Ms 2020
 
 ## Prepare data
