@@ -73,6 +73,27 @@ nnUNet_ensemble -f ../../../mnms/solution1_output ../../../mnms/solution2_output
 
 Segmentation Results will be in `HM_DataAug/mnms/solution5_output`.
 
+
+## A combo for the 5 solutions
+
+Obtaining the segmentation results of the 5 solutions in a container rather than creating 5 containers.
+
+```python
+# generate softmax predictions
+nnUNet_predict -i ../../../mnms/test_data -o ../../../mnms/solution1_output -m 3d_fullres -t Task601_BestHMAug --save_npz
+nnUNet_predict -i ../../../mnms/test_data -o ../../../mnms/solution2_output -m 3d_fullres -t Task602_HMAugMMS  --save_npz
+nnUNet_predict -i ../../../mnms/test_data -o ../../../mnms/temp_solution3 -m 2d -t Task601_BestHMAug --save_npz
+nnUNet_predict -i ../../../mnms/test_data -o ../../../mnms/temp_solution4 -m 2d -t Task602_HMAugMMS --save_npz
+
+# ensemble
+nnUNet_ensemble -f ../../../mnms/solution1_output ../../../mnms/temp_solution3 -o ../../../mnms/solution3_output
+nnUNet_ensemble -f ../../../mnms/solution2_output ../../../mnms/temp_solution4 -o ../../../mnms/solution4_output
+nnUNet_ensemble -f ../../../mnms/solution1_output ../../../mnms/solution2_output ../../../mnms/temp_solution3 ../../../mnms/temp_solution4 -o ../../../mnms/solution5_output
+
+```
+
+
+
 ## Clean Results
 
 - cd ../../../mnms
